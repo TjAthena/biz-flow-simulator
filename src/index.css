@@ -2,121 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Enterprise Design System - Professional B2B Theme */
+/* VizTec Design System — Light mode only, Azure Blue accent, Segoe UI */
 
 @layer base {
   :root {
-    /* Core Colors - Slate/Navy Professional Theme */
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    --background: 0 0% 97%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 220 20% 10%;
 
-    /* Primary - Deep Slate Blue */
-    --primary: 222 47% 20%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 207 90% 41%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light Slate */
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 220 20% 10%;
 
-    /* Muted - Subtle Gray */
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 47%;
 
-    /* Accent - Indigo */
-    --accent: 234 89% 64%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 207 90% 95%;
+    --accent-foreground: 207 90% 30%;
 
-    /* Status Colors */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
-    
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
-    
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Role-Based Accent Colors */
-    --admin: 222 47% 20%;
-    --admin-foreground: 210 40% 98%;
-    
-    --vendor: 142 76% 36%;
-    --vendor-foreground: 0 0% 100%;
-    
-    --delivery: 38 92% 50%;
-    --delivery-foreground: 0 0% 100%;
-    
-    --customer: 234 89% 64%;
-    --customer-foreground: 0 0% 100%;
+    --border: 214 30% 91%;
+    --input: 214 30% 91%;
+    --ring: 207 90% 41%;
 
-    /* UI Elements */
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 47% 20%;
+    --radius: 0.25rem;
 
-    --radius: 0.5rem;
-
-    /* Sidebar */
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 234 89% 64%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 20% 20%;
+    --sidebar-primary: 207 90% 41%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 47% 20%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 47% 20%;
-    --sidebar-ring: 234 89% 64%;
-
-    /* Chart Colors */
-    --chart-1: 222 47% 20%;
-    --chart-2: 142 76% 36%;
-    --chart-3: 38 92% 50%;
-    --chart-4: 234 89% 64%;
-    --chart-5: 0 84% 60%;
-  }
-
-  .dark {
-    --background: 222 47% 8%;
-    --foreground: 210 40% 98%;
-
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
-
-    --secondary: 222 47% 20%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 234 89% 64%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 222 47% 20%;
-    --input: 222 47% 20%;
-    --ring: 234 89% 64%;
-
-    --sidebar-background: 222 47% 6%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 234 89% 64%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 222 47% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 47% 15%;
-    --sidebar-ring: 234 89% 64%;
+    --sidebar-accent: 207 90% 95%;
+    --sidebar-accent-foreground: 207 90% 30%;
+    --sidebar-border: 214 30% 91%;
+    --sidebar-ring: 207 90% 41%;
   }
 }
 
@@ -126,179 +53,6 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-}
-
-@layer components {
-  /* Dashboard Cards */
-  .dashboard-card {
-    @apply bg-card rounded-lg border shadow-sm p-6 transition-all duration-200 hover:shadow-md;
-  }
-
-  /* Status Badges */
-  .status-badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
-  }
-
-  .status-success {
-    @apply bg-success/10 text-success;
-  }
-
-  .status-warning {
-    @apply bg-warning/10 text-warning;
-  }
-
-  .status-error {
-    @apply bg-destructive/10 text-destructive;
-  }
-
-  .status-pending {
-    @apply bg-muted text-muted-foreground;
-  }
-
-  /* Role Indicators */
-  .role-admin {
-    @apply bg-admin text-admin-foreground;
-  }
-
-  .role-vendor {
-    @apply bg-vendor text-vendor-foreground;
-  }
-
-  .role-delivery {
-    @apply bg-delivery text-delivery-foreground;
-  }
-
-  .role-customer {
-    @apply bg-customer text-customer-foreground;
-  }
-
-  /* Data Tables */
-  .data-table {
-    @apply w-full text-sm;
-  }
-
-  .data-table th {
-    @apply text-left font-semibold text-muted-foreground py-3 px-4 border-b;
-  }
-
-  .data-table td {
-    @apply py-3 px-4 border-b;
-  }
-
-  .data-table tr:hover {
-    @apply bg-muted/50;
-  }
-
-  /* Navigation */
-  .nav-link {
-    @apply flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors;
-  }
-
-  .nav-link-active {
-    @apply bg-primary text-primary-foreground;
-  }
-
-  .nav-link-inactive {
-    @apply text-muted-foreground hover:text-foreground hover:bg-muted;
-  }
-
-  /* Form Elements */
-  .form-label {
-    @apply block text-sm font-medium mb-1.5;
-  }
-
-  .form-input {
-    @apply w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
-  }
-
-  /* Page Headers */
-  .page-header {
-    @apply mb-8;
-  }
-
-  .page-title {
-    @apply text-2xl font-bold tracking-tight;
-  }
-
-  .page-description {
-    @apply text-muted-foreground mt-1;
-  }
-
-  /* Metric Cards */
-  .metric-card {
-    @apply dashboard-card flex flex-col;
-  }
-
-  .metric-label {
-    @apply text-sm font-medium text-muted-foreground;
-  }
-
-  .metric-value {
-    @apply text-3xl font-bold mt-2;
-  }
-
-  .metric-change {
-    @apply text-sm mt-2;
-  }
-
-  /* Invoice Styles */
-  .invoice-container {
-    @apply bg-card border rounded-lg p-8 max-w-2xl mx-auto;
-  }
-
-  .invoice-header {
-    @apply flex justify-between items-start mb-8 pb-6 border-b;
-  }
-
-  .invoice-table {
-    @apply w-full mb-6;
-  }
-
-  .invoice-table th {
-    @apply text-left py-2 text-muted-foreground font-medium;
-  }
-
-  .invoice-table td {
-    @apply py-2;
-  }
-
-  .invoice-total {
-    @apply text-right border-t pt-4;
-  }
-}
-
-@layer utilities {
-  /* Animations */
-  .animate-fade-in {
-    animation: fadeIn 0.2s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-4px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-slide-in {
-    animation: slideIn 0.3s ease-out;
-  }
-
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
